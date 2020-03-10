@@ -56,6 +56,8 @@ nav[3].textContent = siteContent.nav['nav-item-4'];
 nav[4].textContent = siteContent.nav['nav-item-5'];
 nav[5].textContent = siteContent.nav['nav-item-6'];
 
+nav.forEach(link => link.style.color = 'green');
+
 
 const cta = document.querySelector('h1');
 const ctaButton = document.querySelector('button');
@@ -82,4 +84,14 @@ mainHeader[3].textContent = siteContent['main-content']['product-content'];
 mainHeader[4].textContent = siteContent['main-content']['vision-content'];
 
 const secondImg = document.getElementById('middle-img');
-secondImg.setAttribute('src', siteContent.img['img-src']);
+secondImg.setAttribute('src', siteContent['main-content'] ['middle-img-src']);
+
+const contactInfo = document.querySelector('.contact');
+
+contactInfo.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4']
+contactInfo.getElementsByTagName('p')[0].textContent = siteContent['contact']['address']
+contactInfo.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
+contactInfo.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
+
+const footer = document.querySelector('footer');
+footer.getElementsByTagName('p')[0].textContent = siteContent.footer['copyright'];
