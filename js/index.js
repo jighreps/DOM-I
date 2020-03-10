@@ -58,6 +58,17 @@ nav[5].textContent = siteContent.nav['nav-item-6'];
 
 nav.forEach(link => link.style.color = 'green');
 
+const headNav = document.querySelector('header nav');
+const newNavA = document.createElement('a');
+newNavA.textContent = "Travel";
+headNav.appendChild(newNavA);
+
+const headerNav = document.querySelector('header nav');
+const newNavAA = document.createElement('a');
+newNavA.textContent = "Location";
+headNav.prepend(newNavAA);
+
+
 
 const cta = document.querySelector('h1');
 const ctaButton = document.querySelector('button');
